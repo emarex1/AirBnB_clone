@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import uuid
 from datetime import datetime
+import models
 
 formate = "%Y-%m-%dT%H:%M:%S.%f"
 
@@ -36,6 +37,7 @@ class BaseModel:
             updated_at with the current datetime
         """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         """
