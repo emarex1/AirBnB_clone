@@ -1,13 +1,12 @@
-#!/usr/bin/python3
-"""Entry point of the command interpreter"""
+#!/usr/bin/env python3
+"""Module for the HBNB console"""
 
 import cmd
 
-
 class HBNBCommand(cmd.Cmd):
-    """Command interpreter class"""
+    """Class for the HBNB console"""
 
-    prompt = "(hbnb) "
+    prompt = '(hbnb) '
 
     def do_quit(self, arg):
         """Quit command to exit the program"""
@@ -18,9 +17,8 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """Empty line should not execute anything"""
+        """Empty line method"""
         pass
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
